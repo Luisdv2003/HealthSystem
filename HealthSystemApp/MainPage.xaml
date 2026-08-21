@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthSystemApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="health_system.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Hospital" />
+
+            <Label
+                Text="Welcome to our health system!!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Where we can save lives"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Click where you wanna start your journey" />
+
+            <Button Text="Patients" Clicked="OnPatients"/>
+            <Button Text="Physicians" Clicked="OnPhysicians"/>
+            <Button Text="Appointments" Clicked="OnAppointments"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

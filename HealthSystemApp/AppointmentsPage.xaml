@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthSystemApp.AppointmentsPage"
+             Title="Appointments">
+    <VerticalStackLayout Padding="20">
+        <Button Text="Add Appointment" Clicked="OnAddAppointment"/>
+        <CollectionView x:Name="AppointmentsList" ItemsSource="{Binding Appointments}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Padding="5">
+                        <Label Text="{Binding patient.name}" FontSize="14"/>
+                        <Label Text=" with " FontSize="14"/>
+                        <Label Text="{Binding physician.name}" FontSize="14"/>
+                        <Label Text="{Binding appointmentDate}" FontSize="14"/>
+                        <Button Text="Delete" Clicked="OnDeleteAppointment"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
+    
