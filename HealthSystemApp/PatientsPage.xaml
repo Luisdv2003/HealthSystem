@@ -3,8 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HealthSystemApp.PatientsPage"
              Title="Patients">
-    <VerticalStackLayout Padding="20">
-        <Button Text="Add Patient" Clicked="OnAddPatients"/>
+   <ScrollView>
+        
+    
+    <VerticalStackLayout Padding="20" Spacing="25">
+            <Image Source="patient.jpg" HeightRequest="200" Aspect="AspectFit"/>
+            <Button Text="Add Patient" Clicked="OnAddPatients"/>
         <CollectionView x:Name="PatientsList" ItemsSource="{Binding Patients}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -17,5 +21,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </VerticalStackLayout>
+     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

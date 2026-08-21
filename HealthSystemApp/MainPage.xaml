@@ -8,10 +8,10 @@
             Padding="30,0"
             Spacing="25">
             <Image
-                Source="health_system.png"
+                Source="health.jpg"
                 HeightRequest="185"
                 Aspect="AspectFit"
-                SemanticProperties.Description="Hospital" />
+                SemanticProperties.Description="Health system" />
 
             <Label
                 Text="Welcome to our health system!!"
